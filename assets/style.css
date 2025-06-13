@@ -7,6 +7,9 @@
 body{
     margin:0;
 }
+/*  ----------------------------------------
+1.0 - Nav Section  */
+
 #nav-holder{
     width:100%;
     top:0;
@@ -15,6 +18,7 @@ body{
 }
 #main-nav{
     width:100%;
+    height:5em;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -41,4 +45,26 @@ body{
 }
 #nav-customer p::after{
     content: "  👤";
+}
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+2.0 - Banner Styles  */
+#homepage-banner{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#homepage-banner-flex{
+    position:relative;
+    flex: 0 0 auto;
+    text-align: center;
+}
+#homepage-banner img{max-width:100%}
+#homepage-banner-cta{
+    position:absolute;
+    bottom:70%;
+    right:5%;
+    font-size:28px;
 }
