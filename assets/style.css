@@ -1,0 +1,35 @@
+*{
+
+}
+body{
+    margin:0;
+}
+#main-nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#main-nav div{
+    flex:0.2 1 10vw;
+}
+#nav-bar{
+    flex:1 0 20vw !important;
+}
+#main-nav #nav-bar ul{
+    display:flex;
+    list-style-type: none;
+}
+#main-nav #nav-bar li{
+    text-align:center;
+    padding:5px;
+    flex:1 0 8vw;
+    text-decoration: none;
+    border: 2px inset #000000
+}
+#nav-customer{
+    text-align:right;
+}
+#nav-customer p::after{
+    content: "  👤";
+}
