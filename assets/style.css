@@ -76,11 +76,13 @@ blockquote::after{
     align-items: center;
 }
 #homepage-banner-flex{
+    width:100%;
+    max-width:1444px;
     position:relative;
     flex: 0 0 auto;
     text-align: center;
 }
-#homepage-banner img{max-width:100%}
+#homepage-banner-flex img{max-width:100%}
 #homepage-banner-cta{
     position:absolute;
     top:10%;
@@ -123,16 +125,15 @@ blockquote::after{
 }
 #homepage-about{
     flex:1 1 auto;
-    background-color: var(--main-card);
 }
 #homepage-social{
-    flex:0.2 1 auto;
-    background-color: var(--main-shadow);
+    max-width:40%;
+    flex:1 1 auto;
 }
  @media screen and (max-width: 600px) {
 /*  ----------------------------------------
 3.0 - Project Styles  */
     .project-card{
-        flex:1 1 50vw;
+        flex:1 1 50%;
     }
  }
