@@ -1,8 +1,17 @@
+:root{
+    --main-bg-color: #ffffff;
+}
 *{
 
 }
 body{
     margin:0;
+}
+#nav-holder{
+    width:100%;
+    top:0;
+    position:sticky;
+    background-color: var(--main-bg-color);
 }
 #main-nav{
     width:100%;
