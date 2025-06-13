@@ -1,5 +1,8 @@
 :root{
-    --main-bg-color: #ffffff;
+    --main-bg-color: #f3f3f3;
+
+    --small-card-radius:10px;
+    --small-card-padding:5px;
 }
 *{
 
@@ -7,14 +10,20 @@
 body{
     margin:0;
 }
+.generic-cta{
+    font-size:28px;
+    background-color: var(--main-bg-color);
+    border-radius: var(--small-card-radius);
+    padding:var(--small-card-padding);
+}
 /*  ----------------------------------------
 1.0 - Nav Section  */
-
 #nav-holder{
     width:100%;
     top:0;
     position:sticky;
     background-color: var(--main-bg-color);
+    z-index:100;
 }
 #main-nav{
     width:100%;
@@ -50,7 +59,7 @@ body{
 
 /*  ----------------------------------------
 2.0 - Banner Styles  */
-#homepage-banner{
+#homepage-banner-cont{
     width:100%;
     display:flex;
     justify-content: center;
@@ -64,7 +73,15 @@ body{
 #homepage-banner img{max-width:100%}
 #homepage-banner-cta{
     position:absolute;
-    bottom:70%;
+    top:10%;
     right:5%;
-    font-size:28px;
 }
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+3.0 - Project Styles  */
+
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+4.0 - ??  */
