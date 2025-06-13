@@ -1,5 +1,9 @@
 :root{
-    --main-bg-color: #f3f3f3;
+    --main-bg: #F5F7FA;
+    --main-shadow: #DADCE0;
+    --main-card: #C8BFB7;
+    --secondary-bg: #AAB8C2;
+    --highlight: #FF6B6B;
 
     --small-card-radius:10px;
     --small-card-padding:5px;
@@ -10,9 +14,15 @@
 body{
     margin:0;
 }
+blockquote::before{
+    content:"❝";
+}
+blockquote::after{
+    content:"❞";
+}
 .generic-cta{
     font-size:28px;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg);
     border-radius: var(--small-card-radius);
     padding:var(--small-card-padding);
 }
@@ -22,7 +32,7 @@ body{
     width:100%;
     top:0;
     position:sticky;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg);
     z-index:100;
 }
 #main-nav{
@@ -80,8 +90,49 @@ body{
 
 /*  ----------------------------------------
 3.0 - Project Styles  */
-
+#homepage-project-flex{
+    margin:0 auto;
+    max-width:1444px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+}
+.project-card{
+    flex:1 1 25%;
+    position:relative;
+}
+.project-card img{
+    width:100%;
+}
+.project-card div{
+    text-align:center;
+}
+.project-card ul{list-style-type:none;}
+.project-card li::before{
+    content:"✅ ";
+}
 /*  ---------------------------------------- */
 
 /*  ----------------------------------------
-4.0 - ??  */
+4.0 - About Us Section  */
+#homepage-about-flex{
+    max-width:1444px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-around;
+}
+#homepage-about{
+    flex:1 1 auto;
+    background-color: var(--main-card);
+}
+#homepage-social{
+    flex:0.2 1 auto;
+    background-color: var(--main-shadow);
+}
+ @media screen and (max-width: 600px) {
+/*  ----------------------------------------
+3.0 - Project Styles  */
+    .project-card{
+        flex:1 1 50vw;
+    }
+ }
