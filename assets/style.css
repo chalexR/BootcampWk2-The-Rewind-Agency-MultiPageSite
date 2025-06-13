@@ -126,10 +126,27 @@ blockquote::after{
 #homepage-about{
     flex:1 1 auto;
 }
+#homepage-about img{width:100%;}
 #homepage-social{
     max-width:40%;
     flex:1 1 auto;
 }
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+5.0 - Footer  */
+#homepage-footer{
+    display:flex;
+    flex-wrap: wrap;
+}
+#homepage-footer div{
+    flex:1 1 25%
+}
+
+
+/*  ----------------------------------------
+MOBILE STYLE SETTINGS  */
+/*  ---------------------------------------- */
  @media screen and (max-width: 600px) {
 /*  ----------------------------------------
 3.0 - Project Styles  */
