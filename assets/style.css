@@ -1,18 +1,43 @@
 :root{
-    --main-bg: #F5F7FA;
-    --main-shadow: #DADCE0;
+    --main-bg: #E2E6EA;
+    --main-border: #e7ecf1;
+    --main-border: #dfe4e8;
+    --main-shadow: #C0C5CC;
+    --main-light: #FAFBFD;
     --main-card: #C8BFB7;
     --secondary-bg: #AAB8C2;
     --highlight: #FF6B6B;
 
-    --small-card-radius:10px;
+    --primary-text: #4A4A4A;
+    --secondary-text: #6E7A88;
+    --muted-text: #AAB8C2;
+    --accent-text: #FF6B6B;
+
+    --small-card-radius:12px;
     --small-card-padding:5px;
+    --small-padding:10px;
+    --small-margin:15px;
+    --small-box-light: -3px -3px 6px 0 var(--main-light);
+    --small-box-shadow: 2px 2px 5px 0 var(--main-shadow);
+    --small-internal-light: -0px -3px 6px var(--main-light) inset;
+    --small-internal-shadow: 0px 2px 5px var(--main-shadow) inset;
+
+    --large-card-radius: 30px;
+    --large-card-padding: 20px;
+    --large-box-light: -8px -8px 12px 0 var(--main-light);
+    --large-box-shadow: 12px 12px 16px var(--main-shadow);
 }
 *{
 
 }
 body{
     margin:0;
+    background-color:var(--main-bg);
+    color: var(--primary-text);
+    font-family: "Exo 2", sans-serif;
+}
+h1,h2,h3,h4,h5{
+    font-family: "Genos", sans-serif;
 }
 blockquote::before{
     content:"❝";
@@ -20,11 +45,28 @@ blockquote::before{
 blockquote::after{
     content:"❞";
 }
+.large-cont-box{
+    padding:var(--large-card-padding);
+    border:1px solid var(--main-border);
+    margin:3em 0;
+    border-radius: var(--large-card-radius);
+    box-shadow:var(--large-box-shadow), var(--large-box-light);
+}
 .generic-cta{
+    font-family: "Genos", sans-serif;
     font-size:28px;
+    font-weight:600;
     background-color: var(--main-bg);
     border-radius: var(--small-card-radius);
     padding:var(--small-card-padding);
+    border-radius:var(--large-card-radius);
+    background-color: var(--main-bg);
+    box-shadow: var(--small-internal-light), var(--small-internal-shadow);
+    border:none;
+}
+.generic-cta:hover{
+    box-shadow: var(--small-box-light), var(--small-box-shadow);
+    transform:translateY(-3px);
 }
 /*  ----------------------------------------
 1.0 - Nav Section  */
@@ -41,6 +83,7 @@ blockquote::after{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    border-bottom:1px solid var(--main-border);
 }
 #main-nav div{
     flex:0.2 1 10vw;
@@ -54,10 +97,21 @@ blockquote::after{
 }
 #main-nav #nav-bar li{
     text-align:center;
-    padding:5px;
-    flex:1 0 8vw;
-    text-decoration: none;
-    border: 2px inset #000000
+    font-family: "Genos", sans-serif;
+    font-size:20px;
+    font-weight:600;
+
+    padding: var(--small-card-padding);
+    margin: 0 var(--small-margin);
+    border-radius: var(--small-card-radius);
+
+    flex:0 0 5vw;
+
+    box-shadow: 
+    var(--small-internal-shadow), 
+    var(--small-internal-light), 
+    var(--small-box-shadow), 
+    var(--small-box-light);
 }
 #nav-customer{
     text-align:right;
@@ -71,47 +125,89 @@ blockquote::after{
 2.0 - Banner Styles  */
 #homepage-banner-cont{
     width:100%;
+    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 #homepage-banner-flex{
-    width:100%;
+    display:flex;
+    width: 97%;
     max-width:1444px;
     position:relative;
-    flex: 0 0 auto;
-    text-align: center;
+    flex: 0 1 auto;
+    text-align: left;
 }
-#homepage-banner-flex img{max-width:100%}
-#homepage-banner-cta{
-    position:absolute;
-    top:10%;
-    right:5%;
+#homepage-banner-flex img{
+    max-width: 60%;
+    border-radius: var(--small-card-radius);
+    box-shadow: var(--small-box-shadow), var(--small-box-light);
 }
 /*  ---------------------------------------- */
 
 /*  ----------------------------------------
 3.0 - Project Styles  */
+#homepage-project-cont{height:100vh;}
 #homepage-project-flex{
     margin:0 auto;
     max-width:1444px;
+    height:auto;
     display:flex;
-    flex-wrap:wrap;
-    align-items:flex-start;
+    flex-wrap:nowrap;
+    align-items:flex-end;
 }
 .project-card{
-    flex:1 1 25%;
+    flex:1 1 auto;
     position:relative;
+
+    border:1px solid var(--main-border);
+    margin: var(--small-margin);
+    box-shadow:var(--small-box-light),var(--small-box-shadow);
+    border-radius:var(--large-card-radius);
+    padding:var(--large-card-padding);
 }
 .project-card img{
     width:100%;
+    border-radius: var(--small-card-radius);
 }
 .project-card div{
+    position:absolute;
+    display:none;
+    width:125%;
     text-align:center;
+    top:15%;
+    left:12.5%;
+    z-index:100;
+    color:#252525;
+    font-weight:600;
+    padding:var(--small-card-padding);
+    border-radius:var(--large-card-radius);
+    border:2px solid rgba(231,236,241,0.3);
+    backdrop-filter: blur(8px);
+    background-color:rgba(226,230,234,0.45);
 }
-.project-card ul{list-style-type:none;}
+.project-card:hover{
+    box-shadow:var(--small-internal-light),var(--small-internal-shadow);
+    background: linear-gradient(135deg, var(--main-bg), var(--main-shadow));
+}
+.project-card:hover div{
+    display:block;
+}
+.project-card ul{
+    list-style-type:none;
+    padding:0;
+    text-align:left;
+}
 .project-card li::before{
     content:"✅ ";
+}
+#homepage-project-cta{
+    display:inline-block;
+    margin:15px 0;
+    flex:0.2 0 auto;
+    padding:14px 7px;
+    font-family: "Genos", sans-serif;
+    font-weight: 600;
 }
 /*  ---------------------------------------- */
 
@@ -120,15 +216,19 @@ blockquote::after{
 #homepage-about-flex{
     max-width:1444px;
     margin: 0 auto;
+    flex-wrap:wrap;
     display:flex;
     justify-content: space-around;
 }
 #homepage-about{
     flex:1 1 auto;
+    min-width:300px;
+    max-width:60%;
 }
 #homepage-about img{width:100%;}
 #homepage-social{
     max-width:40%;
+    min-width:300px;
     flex:1 1 auto;
 }
 /*  ---------------------------------------- */
@@ -137,10 +237,11 @@ blockquote::after{
 5.0 - Footer  */
 #homepage-footer{
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 #homepage-footer div{
-    flex:1 1 25%
+    flex:0.8 1 25%
+    min-width:300px;
 }
 
 
