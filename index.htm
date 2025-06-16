@@ -31,79 +31,92 @@
     <header id="homepage-banner-cont">
         <div id="homepage-banner-flex" class="large-cont-box">
             <img src="./assets/image/rewind-agency-banner.jpg" alt="Introducing the Rewind Agency!">
-            <form>
+            <form id="homepage-form" class="form-style small-internal-inset">
+                <label for="name" class="required">Name: </label>
+                <input type="text" id="name" name="name" class="form-item" required><br />
+                <label for="email" class="required">Email: </label>
+                <input type="email" id="email" name="email" class="form-item" required><br />
+                <label for="phone" class="required">Phone: </label>
+                <input type="tel" id="phone" name="phone" class="form-item" required><br />
+                <label for="date">Do you have a particular date in mind?</label>
+                <input type="date" id="date" name="date" class="form-item"><br />
+                <label for="message" class="required">Message:</label>
+                <textarea id="message" name="message" class="form-item"></textarea><br /><br />
                 <button class="generic-cta">Submit</button>
             </form>
         </div>
     </header>
     <section id="homepage-project-cont">
         <div id="homepage-project-flex" class="large-cont-box">
-            <div class="project-card">
-                <img src="./assets/image/abraham-rave-king.jpg" alt="Abraham Lincoln on the Sesh">
-                <div>
-                    <h2>Abe Raves: The Emancipation Vibration</h2>
-                    <p>History books won’t tell you this — <strong></strong>but Abraham Lincoln would’ve absolutely lost it in a 90s illegal rave.</strong><br />
-                    Tall hat? Already PLUR-coded.<br />
-                    Beard? Peak warehouse chic.<br />
-                    Vibes? Impeccable.</p>
-                    <p>Join us on a once-in-a-timeline experience:<br />
-                    <i>“Four score and seven bangers ago…”</i></p>
-                    <ul>
-                        You'll:
-                        <li>Two-step in the Gettysburg glow-up</li>
-                        <li>Watch Abe light up the dancefloor with glowsticks in both hands</li>
-                        <li>Experience a laser show powerful enough to free a divided nation</li>
-                    </ul>
-                    <p>RIP to the Rave King.<br />
-                    He came for unity. He left covered in UV body paint and love.</p>
+            <h2>Recent Time Tours</h2>
+            <div id="homepage-project-interior">
+                <div class="project-card">
+                    <img src="./assets/image/abraham-rave-king.jpg" alt="Abraham Lincoln on the Sesh">
+                    <div>
+                        <h2>Abe Raves: The Emancipation Vibration</h2>
+                        <p>History books won’t tell you this — <strong></strong>but Abraham Lincoln would’ve absolutely lost it in a 90s illegal rave.</strong><br />
+                        Tall hat? Already PLUR-coded.<br />
+                        Beard? Peak warehouse chic.<br />
+                        Vibes? Impeccable.</p>
+                        <p>Join us on a once-in-a-timeline experience:<br />
+                        <i>“Four score and seven bangers ago…”</i></p>
+                        <ul>
+                            You'll:
+                            <li>Two-step in the Gettysburg glow-up</li>
+                            <li>Watch Abe light up the dancefloor with glowsticks in both hands</li>
+                            <li>Experience a laser show powerful enough to free a divided nation</li>
+                        </ul>
+                        <p>RIP to the Rave King.<br />
+                        He came for unity. He left covered in UV body paint and love.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./assets/image/musk-whisperer.jpg" alt="Whispering in Elon's Ear">
-                <div>
-                    <h2>The Whisper Heard Through Time</h2>
-                    <p>Look, I only went back to whisper one thing in Elon’s ear:</p>
-                    <blockquote>The big bill’s ugly, bro. Taper the edges. Make it fly.</blockquote>
-                    <p>Next thing I know, he’s tweeting wild and tanking stock prices, accidentally leaking Trump’s Epstein Island itinerary like it was a brunch invite.</p>
-                    <p>I didn’t mean to cause an interdimensional scandal — I was just there to change font choices on the Mars UI.</p>
+                <div class="project-card">
+                    <img src="./assets/image/musk-whisperer.jpg" alt="Whispering in Elon's Ear">
+                    <div>
+                        <h2>The Whisper Heard Through Time</h2>
+                        <p>Look, I only went back to whisper one thing in Elon’s ear:</p>
+                        <blockquote>The big bill’s ugly, bro. Taper the edges. Make it fly.</blockquote>
+                        <p>Next thing I know, he’s tweeting wild and tanking stock prices, accidentally leaking Trump’s Epstein Island itinerary like it was a brunch invite.</p>
+                        <p>I didn’t mean to cause an interdimensional scandal — I was just there to change font choices on the Mars UI.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./assets/image/grassy-knole.jpg" alt="The Grassy Knole - JFK">
-                <div>
-                    <h2>“Back… and to the left.”</h2>
-                    <p>Ever wanted to see history unfold from an inconveniently grassy incline?</p>
-                    <p>Join The Rewind Agency on our most requested tour:<br />
-                    💼 “The Grassy Knoll: JFK’s Final Parade & Conspiracy Picnic”</p>
-                    <p>Bring binoculars, a questionable alibi, and your best 60s shades — we’ll handle the ethics waiver.</p>
-                    <ul>
-                        Includes:
-                        <li>Front-row spot near That Fence™</li>
-                        <li>Complimentary tinfoil hat</li>
-                        <li>Awkward eye contact with 3 men in identical beige coats</li>
-                    </ul>
-                    <p><i>Please refrain from altering the timeline. We’ve already lost 2 interns to The Zapruder Incident.</i></p>
+                <div class="project-card">
+                    <img src="./assets/image/grassy-knole.jpg" alt="The Grassy Knole - JFK">
+                    <div>
+                        <h2>“Back… and to the left.”</h2>
+                        <p>Ever wanted to see history unfold from an inconveniently grassy incline?</p>
+                        <p>Join The Rewind Agency on our most requested tour:<br />
+                        💼 “The Grassy Knoll: JFK’s Final Parade & Conspiracy Picnic”</p>
+                        <p>Bring binoculars, a questionable alibi, and your best 60s shades — we’ll handle the ethics waiver.</p>
+                        <ul>
+                            Includes:
+                            <li>Front-row spot near That Fence™</li>
+                            <li>Complimentary tinfoil hat</li>
+                            <li>Awkward eye contact with 3 men in identical beige coats</li>
+                        </ul>
+                        <p><i>Please refrain from altering the timeline. We’ve already lost 2 interns to The Zapruder Incident.</i></p>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./assets/image/guy-fawkes-baseline.jpg" alt="Getting Down with Guy Fawkes">
-                <div>
-                    <h2>Guy Fawkes: Gunpowder, Basslines & Respect</h2>
-                    <p>You know him for the plot — but Guy ‘The G’ Fawkes was all about dropping heat, not just planting it.</p>
-                    <p>Step through time and join him the night before it all went boom:<br />
-                    <strong>One vault. One MiniRig. Pure UK Garage.</strong></p>
-                    <ul>
-                        Expect:
-                        <li>Gunpowder barrels and bass barrels</li>
-                        <li>Fawkes skanking so hard he almost forgot the plan</li>
-                        <li>Reloads so filthy the monarchy felt it in their chest</li>
-                    </ul>
-                    <p>“Remember, remember… that absolute face melter he played in the tunnels.”</p>
-                    <p>Peace. Love. Anarchy. 140bpm.<br />
-                    He didn’t just light the fuse — he was the fuse.</p>
+                <div class="project-card">
+                    <img src="./assets/image/guy-fawkes-baseline.jpg" alt="Getting Down with Guy Fawkes">
+                    <div>
+                        <h2>Guy Fawkes: Gunpowder, Basslines & Respect</h2>
+                        <p>You know him for the plot — but Guy ‘The G’ Fawkes was all about dropping heat, not just planting it.</p>
+                        <p>Step through time and join him the night before it all went boom:<br />
+                        <strong>One vault. One MiniRig. Pure UK Garage.</strong></p>
+                        <ul>
+                            Expect:
+                            <li>Gunpowder barrels and bass barrels</li>
+                            <li>Fawkes skanking so hard he almost forgot the plan</li>
+                            <li>Reloads so filthy the monarchy felt it in their chest</li>
+                        </ul>
+                        <p>“Remember, remember… that absolute face melter he played in the tunnels.”</p>
+                        <p>Peace. Love. Anarchy. 140bpm.<br />
+                        He didn’t just light the fuse — he was the fuse.</p>
+                    </div>
                 </div>
+                <div id="homepage-project-cta" class="generic-cta">See More Tours!</div>
             </div>
-            <div id="homepage-project-cta" class="generic-cta">See More Tours!</div>
         </div>
     </section>
     <section id="homepage-about-cont">

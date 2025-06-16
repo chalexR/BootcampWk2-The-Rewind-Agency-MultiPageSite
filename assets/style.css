@@ -12,6 +12,8 @@
     --secondary-text: #6E7A88;
     --muted-text: #AAB8C2;
     --accent-text: #FF6B6B;
+    --header-font: "Genos", sans-serif;
+    --body-font: "Exo 2", sans-serif;
 
     --small-card-radius:12px;
     --small-card-padding:5px;
@@ -34,10 +36,10 @@ body{
     margin:0;
     background-color:var(--main-bg);
     color: var(--primary-text);
-    font-family: "Exo 2", sans-serif;
+    font-family: var(--body-font);
 }
 h1,h2,h3,h4,h5{
-    font-family: "Genos", sans-serif;
+    font-family: var(--header-font);
 }
 blockquote::before{
     content:"❝";
@@ -48,9 +50,17 @@ blockquote::after{
 .large-cont-box{
     padding:var(--large-card-padding);
     border:1px solid var(--main-border);
-    margin:3em 0;
     border-radius: var(--large-card-radius);
     box-shadow:var(--large-box-shadow), var(--large-box-light);
+    margin: 3em 2vw;
+    height:100%;
+}
+.small-internal-inset{
+    padding: var(--small-card-padding);
+    border-radius: var(--small-card-radius);
+    box-shadow: 
+    var(--small-internal-shadow), 
+    var(--small-internal-light);
 }
 .generic-cta{
     font-family: "Genos", sans-serif;
@@ -67,6 +77,10 @@ blockquote::after{
 .generic-cta:hover{
     box-shadow: var(--small-box-light), var(--small-box-shadow);
     transform:translateY(-3px);
+}
+.required::before{
+    content: "*";
+    color: var(--highlight);
 }
 /*  ----------------------------------------
 1.0 - Nav Section  */
@@ -105,7 +119,7 @@ blockquote::after{
     margin: 0 var(--small-margin);
     border-radius: var(--small-card-radius);
 
-    flex:0 0 5vw;
+    flex:0 0 4em;
 
     box-shadow: 
     var(--small-internal-shadow), 
@@ -124,8 +138,8 @@ blockquote::after{
 /*  ----------------------------------------
 2.0 - Banner Styles  */
 #homepage-banner-cont{
+    margin:2em 0 0 0;
     width:100%;
-    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -147,14 +161,27 @@ blockquote::after{
 
 /*  ----------------------------------------
 3.0 - Project Styles  */
-#homepage-project-cont{height:100vh;}
+#homepage-project-cont{
+    margin:2em 0 0 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
 #homepage-project-flex{
-    margin:0 auto;
     max-width:1444px;
     height:auto;
     display:flex;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     align-items:flex-end;
+}
+#homepage-project-interior{
+    display:flex;
+    flex:0 0 auto;
+    width:100%;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 .project-card{
     flex:1 1 auto;
@@ -202,11 +229,10 @@ blockquote::after{
     content:"✅ ";
 }
 #homepage-project-cta{
-    display:inline-block;
     margin:15px 0;
     flex:0.2 0 auto;
     padding:14px 7px;
-    font-family: "Genos", sans-serif;
+    font-family: var(--header-font);
     font-weight: 600;
 }
 /*  ---------------------------------------- */
@@ -243,8 +269,54 @@ blockquote::after{
     flex:0.8 1 25%
     min-width:300px;
 }
+/*  ---------------------------------------- */
 
+/*  ----------------------------------------
+6.0 - Form Styles  */
+#homepage-form{
+    flex:1 0 auto;
+    background-color: var(--main-bg);
+}
+.form-style{
+    margin: 0 2%;
+}
+.form-style label{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 8px 0;
+}
+.form-item{
+    padding: var(--small-card-padding);
+    border-radius: var(--small-card-radius);
+    box-shadow: 
+    var(--small-internal-shadow), 
+    var(--small-internal-light);
+    background-color:var(--main-bg);
+    border: none;
+    color: var(--primary-text);
+    font-family: var(--body-font);
+}
+textarea{
+    min-width: 70%;
+    min-height:5em;
+}
+input[type="date"] {
+     -webkit-align-items: center;
+     display: -webkit-inline-flex;
+     font-family: monospace;
+     overflow: hidden;
+     padding: 0;
+     -webkit-padding-start: 1px;
+}
 
+input::-webkit-datetime-edit {
+    -webkit-flex: 1;
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    min-width: 0;
+    overflow: hidden;
+}
 /*  ----------------------------------------
 MOBILE STYLE SETTINGS  */
 /*  ---------------------------------------- */
