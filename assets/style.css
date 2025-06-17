@@ -65,10 +65,10 @@ blockquote::after{
 .generic-cta{
     font-family: "Genos", sans-serif;
     font-size:28px;
-    font-weight:600;
-    background-color: var(--main-bg);
+    font-weight:400;
+    color: var(--primary-text);
     border-radius: var(--small-card-radius);
-    padding:var(--small-card-padding);
+    padding:var(--large-card-padding);
     border-radius:var(--large-card-radius);
     background-color: var(--main-bg);
     box-shadow: var(--small-internal-light), var(--small-internal-shadow);
@@ -77,6 +77,10 @@ blockquote::after{
 .generic-cta:hover{
     box-shadow: var(--small-box-light), var(--small-box-shadow);
     transform:translateY(-3px);
+}
+.generic-cta:active{
+    box-shadow: var(--small-internal-light), var(--small-internal-shadow);
+    color: var(--main-card);
 }
 .required::before{
     content: "*";
@@ -279,6 +283,7 @@ blockquote::after{
 }
 .form-style{
     margin: 0 2%;
+    padding: 8px;
 }
 .form-style label{
     display: block;
@@ -297,25 +302,19 @@ blockquote::after{
     color: var(--primary-text);
     font-family: var(--body-font);
 }
+.form-item:focus{
+    outline: none;
+    box-shadow: 
+    var(--small-box-shadow), 
+    var(--small-box-light);
+    transform: translateY(-3px);
+}
 textarea{
     min-width: 70%;
     min-height:5em;
 }
-input[type="date"] {
-     -webkit-align-items: center;
-     display: -webkit-inline-flex;
-     font-family: monospace;
-     overflow: hidden;
-     padding: 0;
-     -webkit-padding-start: 1px;
-}
-
-input::-webkit-datetime-edit {
-    -webkit-flex: 1;
-    -webkit-user-modify: read-only !important;
-    display: inline-block;
-    min-width: 0;
-    overflow: hidden;
+button{
+    padding: 3px 8px !important;
 }
 /*  ----------------------------------------
 MOBILE STYLE SETTINGS  */
