@@ -243,23 +243,69 @@ blockquote::after{
 
 /*  ----------------------------------------
 4.0 - About Us Section  */
-#homepage-about-flex{
-    max-width:1444px;
-    margin: 0 auto;
-    flex-wrap:wrap;
+#homepage-about-cont{
+    margin:2em 0 0 0;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items:center;
+}
+#homepage-about-flex{
+    display:flex;
+    width: 97%;
+    max-width:1444px;
+    max-height: 26em;
+    position: relative;
+    flex: 0 1 auto;
+    text-align: left;
+    align-items: flex-start;
 }
 #homepage-about{
     flex:1 1 auto;
+    display:flex;
     min-width:300px;
-    max-width:60%;
+    max-width:70%;
+    align-items: flex-start;
 }
-#homepage-about img{width:100%;}
+#homepage-about h3{
+    margin-top:0;
+}
+#homepage-about img{
+    flex:0 1 30%;
+    width:30%;
+    border-radius: var(--small-card-radius);
+}
+#homepage-about div{
+    flex:1 1 60%;
+    padding:0 3%;
+    box-sizing: border-box;
+}
 #homepage-social{
-    max-width:40%;
+    position:relative;
+    max-width:30%;
     min-width:300px;
-    flex:1 1 auto;
+    height: 25em;
+    flex: 0 1 auto;
+    margin-bottom:2em;
+    margin-left:1em;
+}
+header#social{
+    max-height: 2em;
+    position:relative;
+}
+header#social img{
+    width: 2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+header#social h3{
+    display: inline-block;
+    vertical-align: middle;
+    margin:0;
+}
+main.social{
+    box-sizing: border-box;
+    max-height: 94%;
+    overflow-y: scroll;
 }
 /*  ---------------------------------------- */
 
@@ -268,6 +314,7 @@ blockquote::after{
 #homepage-footer{
     display:flex;
     flex-wrap: nowrap;
+    
 }
 #homepage-footer div{
     flex:0.8 1 25%
