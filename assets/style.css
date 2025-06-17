@@ -131,6 +131,10 @@ blockquote::after{
     var(--small-box-shadow), 
     var(--small-box-light);
 }
+#main-nav a, #main-nav a:hover, #main-nav a:visited{
+    text-decoration: none;
+    color: var(--primary-text);
+}
 #nav-customer{
     text-align:right;
 }
@@ -251,28 +255,29 @@ blockquote::after{
 }
 #homepage-about-flex{
     display:flex;
+    align-items: stretch;
     width: 97%;
     max-width:1444px;
-    max-height: 26em;
     position: relative;
-    flex: 0 1 auto;
-    text-align: left;
-    align-items: flex-start;
 }
 #homepage-about{
     flex:1 1 auto;
     display:flex;
+    flex-direction:column;
+    align-items: center;
     min-width:300px;
     max-width:70%;
-    align-items: flex-start;
+    box-sizing: border-box;
+    padding:1em;
 }
 #homepage-about h3{
     margin-top:0;
 }
 #homepage-about img{
-    flex:0 1 30%;
-    width:30%;
+    flex:0 1 40%;
+    width:40%;
     border-radius: var(--small-card-radius);
+    margin: 0 0 1em 0;
 }
 #homepage-about div{
     flex:1 1 60%;
@@ -280,13 +285,14 @@ blockquote::after{
     box-sizing: border-box;
 }
 #homepage-social{
-    position:relative;
-    max-width:30%;
-    min-width:300px;
-    height: 25em;
     flex: 0 1 auto;
-    margin-bottom:2em;
-    margin-left:1em;
+    min-width: 300px;
+    max-width: 30%;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 header#social{
     max-height: 2em;
@@ -303,9 +309,9 @@ header#social h3{
     margin:0;
 }
 main.social{
-    box-sizing: border-box;
-    max-height: 94%;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    flex: 1 1 auto;
+    min-height: 0;
 }
 /*  ---------------------------------------- */
 

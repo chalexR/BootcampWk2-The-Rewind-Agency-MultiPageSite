@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive About Section</title>
+  <style>
+    :root {
+      --small-card-padding: 1rem;
+      --small-card-radius: 12px;
+      --small-internal-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+      --small-internal-light: inset -2px -2px 6px rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #1e1f23;
+      color: #f1f1f1;
+    }
+
+    .small-internal-inset {
+      padding: var(--small-card-padding);
+      border-radius: var(--small-card-radius);
+      box-shadow: var(--small-internal-shadow), var(--small-internal-light);
+      background: #2a2b30;
+    }
+
+    #homepage-about-cont {
+      margin: 2em 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #homepage-about-flex {
+      display: flex;
+      align-items: flex-start; /* <- don’t stretch taller child */
+      width: 97%;
+      max-width: 1444px;
+      position: relative;
+      text-align: left;
+    }
+
+    #homepage-about {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+      max-width: 70%;
+    }
+
+    #homepage-social {
+      position: relative;
+      flex: 0 1 auto;
+      max-width: 30%;
+      min-width: 300px;
+      margin-left: 1em;
+      margin-bottom: 2em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden; /* contain scroll */
+    }
+
+    .social-scroll-content {
+      overflow-y: auto;
+      flex: 1;
+      min-height: 0; /* allows scroll inside flex container */
+    }
+
+    /* Optional: mobile stacking */
+    @media (max-width: 768px) {
+      #homepage-about-flex {
+        flex-direction: column;
+      }
+
+      #homepage-social {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="homepage-about-cont">
+    <div id="homepage-about-flex" class="large-cont-box">
+      <div id="homepage-about" class="small-internal-inset">
+        <h2>About Me</h2>
+        <p>This is the about box. It has a controlled amount of content that defines the section height. The adjacent box should not stretch this.</p>
+        <p>Responsive layout rules!</p>
+      </div>
+      <div id="homepage-social" class="small-internal-inset">
+        <div class="social-scroll-content">
+          <h2>Social Links</h2>
+          <ul>
+            <li>GitHub</li>
+            <li>LinkedIn</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Dribbble</li>
+            <li>CodePen</li>
+            <li>Behance</li>
+            <li>Mastodon</li>
+            <li>Substack</li>
+            <li>Newsletter</li>
+            <li>Medium</li>
+            <li>Reddit</li>
+            <li>RSS</li>
+            <li>Discord</li>
+            <li>More links just to make it scroll</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
