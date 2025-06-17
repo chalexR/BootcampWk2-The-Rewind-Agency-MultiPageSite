@@ -314,11 +314,12 @@ main.social{
 #homepage-footer{
     display:flex;
     flex-wrap: nowrap;
-    
+    justify-content: space-around;
+    align-items: flex-start;
+    background: linear-gradient(180deg, var(--main-shadow), var(--main-bg));
 }
 #homepage-footer div{
-    flex:0.8 1 25%
-    min-width:300px;
+    flex:0.8 1 25%;
 }
 /*  ---------------------------------------- */
 
