@@ -285,14 +285,12 @@ blockquote::after{
     box-sizing: border-box;
 }
 #homepage-social{
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     min-width: 300px;
     max-width: 30%;
     margin-left: 1em;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 header#social{
     max-height: 2em;
@@ -313,6 +311,15 @@ main.social{
     flex: 1 1 auto;
     min-height: 0;
 }
+.social-post{border-bottom:1px solid var(--primary-text)}
+.social-handle{
+    font-weight:800;
+    font-size: 11px;
+    margin:1em 0 0 0;
+}
+.social-content{font-size: 14px;}
+.social-content p{margin:0;}
+
 /*  ---------------------------------------- */
 
 /*  ----------------------------------------
@@ -322,7 +329,10 @@ main.social{
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-start;
-    background: linear-gradient(180deg, var(--main-shadow), var(--main-bg));
+    background: linear-gradient(180deg, var(--main-bg), var(--main-shadow));
+    border-top-left-radius: var(--large-card-radius);
+    border-top-right-radius: var(--large-card-radius);
+    box-shadow: var(--large-box-light);
 }
 #homepage-footer div{
     flex:0.8 1 25%;
