@@ -26,8 +26,8 @@
 
     --large-card-radius: 30px;
     --large-card-padding: 20px;
-    --large-box-light: -8px -8px 12px 0 var(--main-light);
-    --large-box-shadow: 12px 12px 16px var(--main-shadow);
+    --large-box-light: -7px -7px 8px 0 var(--main-light);
+    --large-box-shadow: 10px 10px 8px var(--main-shadow);
 }
 *{
 
@@ -85,6 +85,10 @@ blockquote::after{
 .required::before{
     content: "*";
     color: var(--highlight);
+}
+.flex-nowrap{
+    display:flex;
+    flex-wrap:nowrap;
 }
 /*  ----------------------------------------
 1.0 - Nav Section  */
@@ -340,7 +344,17 @@ main.social{
 /*  ---------------------------------------- */
 
 /*  ----------------------------------------
-6.0 - Form Styles  */
+6.0 - Service Page  */
+#service-tiers-cont{
+    margin:2em 0 0 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+7.0 - Form Styles  */
 #homepage-form{
     flex:1 0 auto;
     background-color: var(--main-bg);
