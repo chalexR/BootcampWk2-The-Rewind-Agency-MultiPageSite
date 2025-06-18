@@ -89,6 +89,15 @@ blockquote::after{
 .flex-nowrap{
     display:flex;
     flex-wrap:nowrap;
+    justify-content: space-around;
+}
+.ul-ticklist{
+    list-style-type:none;
+    padding:0;
+    text-align:left;
+}
+.ul-ticklist li::before{
+    content:"✅ ";
 }
 /*  ----------------------------------------
 1.0 - Nav Section  */
@@ -231,14 +240,6 @@ blockquote::after{
 }
 .project-card:hover div{
     display:block;
-}
-.project-card ul{
-    list-style-type:none;
-    padding:0;
-    text-align:left;
-}
-.project-card li::before{
-    content:"✅ ";
 }
 #homepage-project-cta{
     margin:15px 0;
