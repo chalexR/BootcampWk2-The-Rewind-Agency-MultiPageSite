@@ -32,6 +32,16 @@
 *{
 
 }
+a{
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+a:hover{
+    color: var(--primary-text);
+}
+a:active{
+    color:var(--highlight);
+}
 body{
     margin:0;
     background-color:var(--main-bg);
