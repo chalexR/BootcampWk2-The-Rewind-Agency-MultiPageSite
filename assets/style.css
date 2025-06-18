@@ -436,7 +436,7 @@ button{
 /*  ----------------------------------------
 MOBILE STYLE SETTINGS  */
 /*  ---------------------------------------- */
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 768px) {
     .flex-nowrap{
         flex-wrap:wrap;
     }
