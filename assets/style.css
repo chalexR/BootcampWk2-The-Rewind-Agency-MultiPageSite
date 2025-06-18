@@ -136,7 +136,7 @@ blockquote::after{
     top:0;
     position:sticky;
     background-color: var(--main-bg);
-    z-index:100;
+    z-index:120;
 }
 #main-nav{
     width:100%;
@@ -239,7 +239,6 @@ blockquote::after{
     display:flex;
     flex:0 0 auto;
     width:100%;
-    flex-wrap:nowrap;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
@@ -371,7 +370,6 @@ main.social{
 5.0 - Footer  */
 #homepage-footer{
     display:flex;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-start;
     background: linear-gradient(180deg, var(--main-bg), var(--main-shadow));
@@ -439,9 +437,91 @@ button{
 MOBILE STYLE SETTINGS  */
 /*  ---------------------------------------- */
  @media screen and (max-width: 600px) {
+    .flex-nowrap{
+        flex-wrap:wrap;
+    }
+    .large-cont-box{
+        padding:2em 1em;
+    }
+    .contact-list{
+        padding:0;
+    }
+/*  ----------------------------------------
+1.0 - Nav Section  */
+    #main-nav{
+        flex-direction: column;
+        height:auto;
+    }
+    #nav-bar{width:70%;}
+    #main-nav #nav-bar ul{
+        flex-direction: column;
+        align-items:center;
+        margin:0;
+        padding:0;
+    }
+    #main-nav #nav-bar li{
+        flex: 0 0 100%;
+        width:100%;
+        margin:0;
+    }
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+2.0 - Banner Styles  */
+#homepage-banner-flex img{
+    max-width: 100%;
+    margin-bottom:2em;
+}
+/*  ---------------------------------------- */
+
 /*  ----------------------------------------
 3.0 - Project Styles  */
+    #homepage-project-flex h2{
+        width:100%;
+        text-align: center;
+        margin:0 auto;
+    }
     .project-card{
         flex:1 1 50%;
+        padding: 1em 2px;
+        box-sizing: border-box;
     }
+    .project-card div{
+        position: relative;
+        display: block;
+        width:100%;
+        left:0;
+        top:0;
+        margin:0;
+        padding:0;
+        background:none;
+        border:none;
+        box-sizing: border-box;
+    }
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+4.0 - About Us Section  */
+    #homepage-about{
+        max-width:none;
+        margin:0;
+    }
+    #homepage-about img{
+        width:90%;
+    }
+    #homepage-social{
+        max-width:none;
+        margin:0;
+    }
+/*  ---------------------------------------- */
+
+/*  ----------------------------------------
+5.0 - Footer  */
+    #homepage-footer div{
+        border-bottom: 1px solid var(--primary-text);
+        flex:1 1 100%;
+        margin:0 1em 1em 1em;
+        padding-bottom:1em;
+    }
+/*  ---------------------------------------- */
  }
