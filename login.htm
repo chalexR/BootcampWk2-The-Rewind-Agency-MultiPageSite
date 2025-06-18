@@ -27,11 +27,13 @@
         </nav>
     </nav>
 
-    <main class="small-internal-inset">
-        <form class="form-style">
-            <input type="text">
-            <input type="password">
-            <button type="submit">Login</button>
+    <main class="centre">
+        <form class="form-style small-internal-inset inline">
+            <label for="user" class="required">Username: </label>
+            <input id="user" name="user" type="text" class="form-item" required>
+            <label for="password" class="required">Password: </label>
+            <input id="password" name="password" type="password" class="form-item" required><br /><br />
+            <button type="submit" class="generic-cta">Login</button>
         </form>
     </main>
     
