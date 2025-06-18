@@ -58,6 +58,7 @@ blockquote::after{
 .small-internal-inset{
     padding: var(--small-card-padding);
     border-radius: var(--small-card-radius);
+    margin: var(--small-margin);
     box-shadow: 
     var(--small-internal-shadow), 
     var(--small-internal-light);
@@ -90,6 +91,9 @@ blockquote::after{
     display:flex;
     flex-wrap:nowrap;
     justify-content: space-around;
+}
+.flex-column{
+    flex-direction: column;
 }
 .ul-ticklist{
     list-style-type:none;
