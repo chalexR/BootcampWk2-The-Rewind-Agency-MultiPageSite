@@ -103,6 +103,13 @@ blockquote::after{
 .ul-ticklist li::before{
     content:"✅ ";
 }
+.contact-list{
+    list-style-type:none;
+}
+.contact-list li{margin:1em 0;}
+.phone::before{content: "📞 "}
+.email::before{content: "📧 "}
+.address::before{content: "📍 "}
 /*  ----------------------------------------
 1.0 - Nav Section  */
 #nav-holder{
